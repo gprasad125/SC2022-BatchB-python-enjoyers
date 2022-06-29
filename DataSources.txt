@@ -1,0 +1,44 @@
+Topics:
+- Sports            Said
+- Trends            Said
+- History           Said
+- Global Warming    Said
+- Science           Said
+- Technology        Said
+- Economy
+    - Inflation
+- Wealth            Said
+- Space/Planets     Said
+- Water Scarcity
+- Car prices
+
+
+Guidelines for Data Sources:
+- Look for ".csv" file(s)
+    - These are handled very well by pandas
+- Does the data set have a target variable?
+    - Meaning, does the dataset contain something you'd like to predict, or measure?
+- Do you think it would work well with graphs / plots? 
+    - EDA necessitates that we have well-defined and strong plots to show our insights.
+
+Helpful websites:
+1) https://www.kaggle.com/datasets
+2) https://data.world/
+3) https://datasetsearch.research.google.com/
+
+Dataset Sources:
+1. https://data.gov/                           Said
+2. https://www.census.gov/data.html            Said 
+3. https://data.worldbank.org/                 Said 
+4. https://trends.google.com/trends/?geo=US    Said
+5. https://www.cdc.gov/datastatistics/         Said
+6. https://www.google.com/publicdata/directory Said
+7. https://fred.stlouisfed.org/                Said
+8. https://opencorporates.com/                 Said
+9. https://comtrade.un.org/                    Said
+10.https://data.giss.nasa.gov/gistemp/         Said
+11.https://wgms.ch/data_exploration/           Said
+12.https://data.worldbank.org/topic/education  Said
+13.https://www.kaggle.com/datasets/harikrishnareddyb/used-car-price-predictions
+    - This is viable as a dataset, Has some target variables, lots of features.
+
