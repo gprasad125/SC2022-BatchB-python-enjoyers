@@ -1,4 +1,4 @@
-Topics:
+Topics:        
 - Sports            Said
 - Trends            Said
 - History           Said
@@ -11,6 +11,7 @@ Topics:
 - Space/Planets     Said
 - Water Scarcity
 - Car prices
+- Cryptocurrencies 
 
 
 Guidelines for Data Sources:
@@ -41,4 +42,16 @@ Dataset Sources:
 12.https://data.worldbank.org/topic/education  Said
 13.https://www.kaggle.com/datasets/harikrishnareddyb/used-car-price-predictions
     - This is viable as a dataset, Has some target variables, lots of features.
+14. https://www.kaggle.com/datasets/team-ai/bitcoin-price-predictionw
+15. https://www.kaggle.com/datasets/kalilurrahman/top-box-office-revenue-data-english-movies
+    - Movie revenue data
+16. https://www.kaggle.com/datasets/imdevskp/corona-virus-report
+    - Cases for Covid
+17. https://www.kaggle.com/code/ritikmeena/covid-19-prediction/data?select=covid.csv
+    - COVID patient-by-patient data (date of entry, pregnancy status, etc.)
+18. https://www.kaggle.com/datasets/sevgisarac/temperature-change
+    - Temperature from 1967 -- 2019
+19. https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data
+    - Used cars (w/ price column – predict price?)
+w
 
