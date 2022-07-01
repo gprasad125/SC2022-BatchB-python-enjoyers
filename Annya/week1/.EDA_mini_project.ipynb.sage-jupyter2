@@ -52,5 +52,5 @@
 {"cell_type":"markdown","id":"fbe137","input":"**TODO:** Create a scatter plot using plotly. Please add a title here!\n\nMaybe google \"Scatter plots in plotly python\" to start!\n\n","pos":42,"type":"cell"}
 {"cell_type":"raw","id":"0571d2","input":"Write up some descriptions for your findings here....\n\nGenerally, as Body Mass increases, Flipper Length increases \nAlmost 50% of the penguins sampled come from the island of Biscoe. 36% come from Dream and 15% come from Torgersen.\n\n","pos":51,"type":"cell"}
 {"cell_type":"raw","id":"a18cbc","input":"What do these columns mean?\n\nThe culmen is the upper ridge of the penguin's bill.\nThe data likely describes nests of eggs called 'clutches'.\n\n\nAccording to Wikipedia, delta-N-15 is a measure of the ratio of the two stable isotopes of nitrogen, 15N:14N.[1]\n\nA source briefly explaining all the columns: https://allisonhorst.github.io/palmerpenguins/reference/penguins_raw.html ","pos":11,"type":"cell"}
-{"id":0,"time":1656613636404,"type":"user"}
-{"last_load":1656613636190,"type":"file"}
+{"id":0,"time":1656697439460,"type":"user"}
+{"last_load":1656697439265,"type":"file"}
