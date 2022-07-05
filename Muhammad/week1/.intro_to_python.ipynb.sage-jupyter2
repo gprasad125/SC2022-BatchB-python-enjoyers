@@ -104,5 +104,5 @@
 {"cell_type":"markdown","id":"e4fbef","input":"In the block below, create a function that takes in a list and prints out each element 1 at a time. For example, if the input was ['Dog', 'Cat', 'Hamster'], the output should be\n\nDog\n\nCat\n\nHamster\n\n","pos":74,"type":"cell"}
 {"cell_type":"markdown","id":"e6db48","input":"To access a specific item from the list, you would do the following.","pos":25,"type":"cell"}
 {"cell_type":"markdown","id":"f1952e","input":"In the next block, ask the user to input 3 items and add them all to a list. Then. create a loop that prints out each item that the user entered.","pos":56,"type":"cell"}
-{"id":0,"time":1656520301069,"type":"user"}
-{"last_load":1656520300594,"type":"file"}
+{"id":0,"time":1657043394621,"type":"user"}
+{"last_load":1657043393093,"type":"file"}

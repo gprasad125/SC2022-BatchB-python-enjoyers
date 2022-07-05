@@ -41,5 +41,5 @@
 {"cell_type":"code","exec_count":82,"id":"92d195","input":"arr = np.array([1, 0, 5, 7, 0])\narr.mean()","output":{"0":{"data":{"text/plain":"2.6"},"exec_count":82,"output_type":"execute_result"}},"pos":38,"type":"cell"}
 {"cell_type":"code","exec_count":95,"id":"e22782","input":"px.scatter(data, x = \"ph\", y = \"Chloramines\", hover_data = [\"Hardness\", \"Solids\"])\n","output":{"0":{"data":{"iframe":"7af826c2527f56a37edc40fdbf2e2e2cc5f8a79d"},"exec_count":95,"output_type":"execute_result"}},"pos":12,"type":"cell"}
 {"cell_type":"raw","id":"a3f4e6","input":"px.scatter(x = data[\"ph\"],\n          y = data[\"Hardness\"],\n          color = data[\"Potability\"])","pos":9,"type":"cell"}
-{"id":0,"time":1656712115582,"type":"user"}
-{"last_load":1656711891032,"type":"file"}
+{"id":0,"time":1657043059867,"type":"user"}
+{"last_load":1657042853764,"type":"file"}
