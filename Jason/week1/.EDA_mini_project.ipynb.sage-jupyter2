@@ -52,5 +52,5 @@
 {"cell_type":"markdown","id":"ecac80","input":"**TODO:** Let's make it look even better. Copy your function from above but add another argument to the function by setting the `color=\"Species\"`. Not sure what this means? Get to the scatter plots page on plotly and scroll down to the \"Setting size and color with column names\" section.\n\n","pos":44,"type":"cell"}
 {"cell_type":"raw","id":"6bd5a4","input":"Write up some descriptions for your findings here....\n\n\n\n\n","pos":51,"type":"cell"}
 {"cell_type":"raw","id":"d51727","input":"What do these columns mean?\n\n\nStudy Name is probably what study each penguin was done in\nSample number is indivisual number assigned to each penguin\nSpecies is the species of penguin\nRegion: what region the pandas are from\nIsland: specific island\nStage: what stage in the life of the penguin\nIndivisual ID: the penguin's id\nClutch Completion: does the nest have 2 eggs?\nDate Egg: the date when they saw the egg\nCulmen length: length of the dorsal ridge on the penguin's bill (mm)\nCulmen Depth: depth of the dorsal ridge onthe penguin's bill (mm)\nFlipper Length: Length of the flipper(mm)\nBody Mass: Mass of the penguin (grams)\nSex: Male or Female\nDelta 15 N (o/oo): ratio of stable isotopes 15N:14N\nDelta 13 C (o/oo): ratio of stable isotopes 13C:12C\nComments: any other comments on the penguin\n\n","pos":11,"type":"cell"}
-{"id":0,"time":1657045491331,"type":"user"}
-{"last_load":1657045491470,"type":"file"}
+{"id":0,"time":1657218359443,"type":"user"}
+{"last_load":1657218359501,"type":"file"}
