@@ -105,5 +105,5 @@
 {"cell_type":"markdown","id":"eb2d66","input":"Now figure out how to `append()` an item to your list. Maybe google: \"how to append an item to a list python\"\n\n","pos":32,"type":"cell"}
 {"cell_type":"markdown","id":"f95c0f","input":"Next, we'll take a look at while loops. In general, you can make a while loop do anything that a for loop can do but with slightly different syntax, so if you find youself understanding while loops better than for loops, you can just focus on using while loops. \n\n","pos":39,"type":"cell"}
 {"cell_type":"markdown","id":"ff358d","input":"Below, create a list of your favorite colors. \n","pos":30,"type":"cell"}
-{"id":0,"time":1656613430239,"type":"user"}
-{"last_load":1656613430779,"type":"file"}
+{"id":0,"time":1657660935660,"type":"user"}
+{"last_load":1657647643922,"type":"file"}
