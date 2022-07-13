@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -10,45 +10,48 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-  </head>
-  <img src = "https://cdn.discordapp.com/attachments/789598759952711683/996792748071985183/AI_Camp_Original_Logo.png" width = "100px" align = "right" style="position: relative; top: 45px; right: 5px">  
-        <body class="sb-nav-fixed">
-                <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html">Python-Enjoyers</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-          </nav>
-            <!-- Navbar-->
+            <!-- Navbar Search-->
+        </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="charts-duplicate.html">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-computer"></i></div>
-                                Machine Learning
-                            </a>
-                          <a class="nav-link" href="About-us.html">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
-                                About Us
-                           </a>
-                       </div>
-                    </div>
-                </nav>
-            </div>
-      </div>
+            <div id="layoutSidenav">
+                <div id="layoutSidenav_nav">
+                    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                        <div class="sb-sidenav-menu">
+                            <div class="nav">
+                                <a class="nav-link" href="index.html">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    Dashboard
+                                </a>
+                                <a class="nav-link" href="charts.html">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                    Charts
+                                </a>
+                                <a class="nav-link" href="machineLearning.html">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-computer"></i></div>
+                                    Machine Learning
+                                </a>
+                                <a class="nav-link" href="About-us.html">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
+                                    About Us
+                               </a>
+                           </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>  
+            <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4" style="margin-top: 40px; font-size:50px;">Water Quality</h1>
+
+                        <h1 class="mt-4"; style = "font-size:50px";>Water Quality</h1>
+
                         <ol class="breadcrumb mb-4">
                             <li style = "color:black;" "font-family: monaco;" class="breadcrumb-item active" >  Our goal is to predict the potability of water using classifying machine learning techniques. Using elements from our dataset we aim to classify new inputs as either potable (drinkable) or not potable (undrinkable).</li>
                         </ol>
@@ -56,7 +59,7 @@
                             <div class="col-xl-12">
                                 <div class="card mb-4">
                                     <div class="card-header">
-                          <img src = "https://givemechallenge.com/wp-content/uploads/2021/08/Water-Quality-Monitoring.jpg" width = 450px style = "text-align: center">
+                          <img src = "https://givemechallenge.com/wp-content/uploads/2021/08/Water-Quality-Monitoring.jpg" width = 450px  style = "margin:auto">
                       </div>
                         <li style = "color:black;" "font-family: monaco;" class="breadcrumb-item active" > <b>Dataset column definitions:</b>
                                <br>   <b>pH</b> - The measure of acidity in the water.
@@ -71,12 +74,15 @@
                                <br>   <b>Potability</b> - Whether the water is able to be consumed. (0 = Non potable, 1 = Potable)
                                   </li>
                         </div>
+                        
+                        
                         <div class="card mb-4">
-    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                               <b>Water Potability Dataset</b>
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                    <b>Water Potability Dataset</b>
                             </div>
-              <table id="datatablesSimple">
+                            <div class="card-body">
+                                <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>pH</th>
@@ -792,21 +798,12 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
                         </div>
                     </div>
-                   </div>
-                  </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            
-             
-                        </div>
-                    </div>
-                </footer>
-            
-        
+            </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
