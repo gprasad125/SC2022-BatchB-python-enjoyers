@@ -89,9 +89,10 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
 html, body {
   margin: 0; 
-  padding: 0;
+  padding:0;
 }
 
 hr {
@@ -404,6 +405,10 @@ fieldset {
   padding: 0;
   margin: 0;
   border: 0;
+}
+
+godown {
+   height: 100px;
 }
 
 legend {
@@ -7452,6 +7457,7 @@ textarea.form-control-lg {
 }
 
 .p-4 {
+  padding
   padding: 1.5rem !important;
 }
 
