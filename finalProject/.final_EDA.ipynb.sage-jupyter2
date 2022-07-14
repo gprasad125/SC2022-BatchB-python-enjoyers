@@ -11,4 +11,4 @@
 {"cell_type":"code","exec_count":7,"id":"151fda","input":"sns.set_theme(style=\"ticks\")\nsns.pairplot(data, hue=\"Potability\")","output":{"0":{"data":{"text/plain":"<seaborn.axisgrid.PairGrid at 0x7ff5ec7a0340>"},"exec_count":7,"output_type":"execute_result"},"1":{"data":{"image/png":"11b41dec16776d573f02e125ebe3583f535b25cb","text/plain":"<Figure size 1684.67x1620 with 90 Axes>"},"exec_count":7,"output_type":"execute_result"}},"pos":7,"type":"cell"}
 {"cell_type":"code","exec_count":8,"id":"550b6c","input":"fig = px.scatter_matrix(data, color = \"Potability\", color_continuous_scale = \"bluered\")\nfig.show()\n\nfig.write_html(\"scatter_matrix.html\")","output":{"0":{"data":{"iframe":"8c406d61adc7e0c8dd62f25460362d9835d8b675"},"exec_count":8,"output_type":"execute_result"}},"pos":9,"type":"cell"}
 {"id":0,"time":1657745514219,"type":"user"}
-{"last_load":1657736668704,"type":"file"}
+{"last_load":1657818079121,"type":"file"}

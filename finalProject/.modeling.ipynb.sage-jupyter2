@@ -22,5 +22,5 @@
 {"cell_type":"markdown","id":"168a65","input":"### DecisionTreeClassifier\n\n","pos":12,"type":"cell"}
 {"cell_type":"markdown","id":"9b5058","input":"### imputations\n\n","pos":17,"type":"cell"}
 {"cell_type":"markdown","id":"c4de2a","input":"### RandomForestClassifier\n\n","pos":9,"type":"cell"}
-{"id":0,"time":1657736723215,"type":"user"}
-{"last_load":1657732236762,"type":"file"}
+{"id":0,"time":1657822954114,"type":"user"}
+{"last_load":1657818078601,"type":"file"}

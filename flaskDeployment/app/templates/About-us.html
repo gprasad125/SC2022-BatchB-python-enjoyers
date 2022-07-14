@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Charts - SB Admin</title>
+        <link href="{{url_for('static', filename = 'css/styles.css')}}" rel="stylesheet" /> 
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+  <img src = "https://cdn.discordapp.com/attachments/789598759952711683/996792748071985183/AI_Camp_Original_Logo.png" width = "100px" align = "right" style="position: relative; top: 65px; right: 5px">   
+  
+  <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="{{url_for('static', filename = 'index.html')}}">Python Enjoyers</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar-->
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="index">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <a class="nav-link" href="charts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="machineLearning">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-computer"></i></div>
+                                Machine Learning
+                            </a>
+                          <a class="nav-link" href="About-us">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
+                                About Us
+                           </a>
+                       </div>
+                    </div>
+                </nav>
+            </div>
+            <div id = "layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                      <h1 class="mt-4">About Us</h1>
+                        <div class="card mb-4" style = "width: fit-content;">
+                          <div class = "row"> </div>
+                            <div class="card-body">
+                                  <center><img src="{{url_for('static', filename = 'assets/img/Jason.png')}}" alt="Avatar" class = "center" style="width:240px;height:200px;opacity:0.85;display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Jason Sabol</b></h5></center>    
+                                 <center> <p>Frontend &amp; Backend Developer</p>  </center>   
+                                  </div>
+                          </div>
+                            </div>
+                      
+                      <div class="card mb-4" style = "width: fit-content">
+                            <div class="card-body">
+
+                                  <center><img src="{{url_for('static',filename = 'assets/img/Screenshot 2022-07-14 10.54.33 AM.png')}}" alt="Avatar" class = "center" style="width:2000x; height:200px; opacity:0.85; display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Muhammad Said Shafoat</b></h5></center>    
+                                    <center> <p>Frontend &amp; Backend Developer</p> <p></p> </center>   
+                                  </div>
+                          
+                              
+                          
+                          </div>
+                            </div>
+                      
+                      <div class="card mb-4" style = "width: fit-content">
+                            <div class="card-body">
+
+                                  <center><img src="{{url_for('static', filename = 'assets/img/Photo-2.jpeg')}}" alt="Avatar" class = "center" style="width:240px; height:200px; opacity:0.85; display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Ethan Nguyen</b></h5></center>    
+                                 <center> <p>Frontend Developer</p>  </center>   
+                                  </div>
+                              
+                              <center><img src="{{url_for('static', filename = 'assets/img/Sean.jpeg')}}" alt="Avatar" class = "center" style="width:240px;height:200px;opacity:0.85;display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Sean Fields</b></h5></center>    
+                                 <center> <p>Backend Developer</p>  </center>   
+                                  </div>
+                              <center><img src="{{url_for('static', filename = 'assets/img/.png')}}" alt="Avatar" class = "center" style="width:240px;height:200px;opacity:0.85;display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Annya Kong</b></h5></center>    
+                                 <center> <p>Epik :P</p>  </center>   
+                                  </div>
+                              <center><img src="{{url_for('static', filename = 'assets/img/.png')}}" alt="Avatar" class = "center" style="width:240px;height:200px;opacity:0.85;display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Smayan</b></h5></center>    
+                                 <center> <p></p>  </center>   
+                                  </div>
+                              <center><img src="{{url_for('static', filename = 'assets/img/gokul.jpeg')}}" alt="Avatar" class = "center" style="width:240px;height:200px;opacity:0.85;display: inline"> </center>   
+                                  <div class="container" >
+                                  <center><h5><b>Gokul Prasad</b></h5></center>    
+                                 <center> <p>Instructor</p>  </center>   
+                                  </div>
+                          
+                              
+                          
+                          </div>
+                            </div>
+                      
+                      <div class="card mb-4" style = "width: fit-content">
+                        <div class="card-body">
+                          <center><h5><b>Conclusion</b></h5></center>
+                          <div><p>Out of our three models, K-Nearest Neighbors, Random Forest Classifier, and Decision Tree Classifier, we found that the most accurate model was the Decision Tree Classifier with a 70% accuracy. We also found that not changing the NaN values made it more accurate than imputing the NaN values. If we had more time we could try different imputing techniques to improve our accuracy or gather more data to have a better trained models. If we were to change this problem to a regression problem, instead of classifying whether the water is potable enough to drink, we could scale water potability to usage. So you could use water for different purposes depending on the waters quality.</p></div>
+                    
+                    <center><b><h5>So What?</h5></b></center>
+                  <p>
+                    So what is the significance of making this product? The reason is because we want people to be able to know if they have a clean water source or not. Our hope is that this product will help millions of people around the world who live in the the poorer areas determine if their water source is truly sanitary water or not, so people won't start getting sick from drinking dirty water. It does all of this by predicting the waters potability from thousands of datasets! 
+
+                    </p>
+                          </div>
+                  </div>
+                         </div>
+                  
+
+            </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename = 'js/scripts.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src= "{{url_for('static', filename = 'assets/demo/chart-area-demo.js')}}"></script>
+        <script src="{{url_for('static', filename = 'assets/demo/chart-bar-demo.js')}}"></script>
+        <script src="{{url_for('static', filename = 'assets/demo/chart-pie-demo.js')}}"></script>
+  </body>
+</html>

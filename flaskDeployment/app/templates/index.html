@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="{{url_for('static', filename = 'css/styles.css')}}" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Python-Enjoyers</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav">
+                <div id="layoutSidenav_nav">
+                    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                        <div class="sb-sidenav-menu">
+                            <div class="nav">
+                                <a class="nav-link" href="index">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    Dashboard
+                                </a>
+                                <a class="nav-link" href="charts">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                    Charts
+                                </a>
+                                <a class="nav-link" href="machineLearning">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-computer"></i></div>
+                                    Machine Learning
+                                </a>
+                                <a class="nav-link" href="About-us">
+                                    <div class="sb-nav-link-icon"><i class="fa-solid fa-address-book"></i></div>
+                                    About Us
+                               </a>
+                           </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>  
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+
+                        <h1 class="mt-4"; style = "font-size:50px";>Water Quality</h1>
+
+                        <ol class="breadcrumb mb-4">
+                            <li style = "color:black;" "font-family: monaco;" class="breadcrumb-item active" >  Our goal is to predict the potability of water using classifying machine learning techniques. Using elements from our dataset we aim to classify new inputs as either potable (drinkable) or not potable (undrinkable).</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card mb-4" style = "text-align: center;">
+                                    <div class="card-header">
+                                          <img src = "https://givemechallenge.com/wp-content/uploads/2021/08/Water-Quality-Monitoring.jpg" width = 450px style = "margin:auto">
+                                      </div>
+                                    <b> Dataset column definitions:</b>
+                                    <p style = "color:black;" "font-family: monaco; " class="breadcrumb-item active" > 
+                                           <br>   <b>pH</b> - The measure of acidity in the water.
+                                           <br>   <b>Hardness</b> - The measure of heavy metals in the water.
+                                           <br>   <b>Solids</b> - The measure of total dissolved solids in the water.
+                                           <br>   <b>Chloramines</b> - The measure of disinfectants in the water.
+                                           <br>   <b>Sulfate</b> - The measure of sulfate in the water.
+                                           <br>   <b>Conductivity</b> - The measure of electrical conductivity in the water.
+                                           <br>   <b>Organic Carbon</b> - The measure of carbon in the water.
+                                           <br>   <b>Trihalomethanes</b> - The measure of water treatment in the water.
+                                           <br>   <b>Turbidity</b> - The measure of clarity in the water.
+                                           <br>   <b>Potability</b> - Whether the water is able to be consumed. (0 = Non potable, 1 = Potable)
+                                    </p<pre></pre>>
+                                </div>
+                        
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                    <b>Water Potability Dataset</b>
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>pH</th>
+                                            <th>Hardness</th>
+                                            <th>Solids</th>
+                                            <th>Chloramines</th>
+                                            <th>Sulfate</th>
+                                            <th>Conductivity</th>
+                                            <th>Organic Carbon</th>
+                                            <th>Trihalomethanes</th>
+                                            <th>Turbidity</th>
+                                            <th>Potability</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>pH</th>
+                                            <th>Hardness</th>
+                                            <th>Solids</th>
+                                            <th>Chloramines</th>
+                                            <th>Sulfate</th>
+                                            <th>Conductivity</th>
+                                            <th>Organic Carbon</th>
+                                            <th>Trihalomethanes</th>
+                                            <th>Turbidity</th>
+                                            <th>Potability</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>204.890455</td>
+                                            <td>20791.318981</td>
+                                            <td>7.300212</td>
+                                            <td>368.516441</td>
+                                            <td>564.308654</td>
+                                            <td>10.379783</td>
+                                            <td>86.990970</td>
+                                            <td>2.963135</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.716080</td>
+                                            <td>129.422921</td>
+                                            <td>18630.057858</td>
+                                            <td>6.635246</td>
+                                            <td>Nan</td>
+                                            <td>592.885359</td>
+                                            <td>15.180013</td>
+                                            <td>56.329076</td>
+                                            <td>4.500656</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.099124</td>
+                                            <td>224.236259</td>
+                                            <td>19909.541732</td>
+                                            <td>9.275884</td>
+                                            <td>NaN</td>
+                                            <td>418.606213</td>
+                                            <td>16.868637</td>
+                                            <td>66.420093</td>
+                                            <td>3.055934</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.316766</td>
+                                            <td>214.373394</td>
+                                            <td>22018.417441</td>
+                                            <td>8.059332</td>
+                                            <td>356.886136</td>
+                                            <td>363.266516</td>
+                                            <td>18.436524</td>
+                                            <td>100.341674</td>
+                                            <td>4.628771</td>
+                                            <td>0</td> <!--I'm just throwing in some potable datapoints from data.tail()-->
+                                        </tr>
+                                        <tr>
+                                            <td>9.092223</td>
+                                            <td>181.101509</td>
+                                            <td>17978.986339</td>
+                                            <td>6.546600</td>
+                                            <td>310.135738</td>
+                                            <td>398.410813</td>
+                                            <td>11.558279</td>
+                                            <td>31.997993</td>
+                                            <td>4.075075</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.584087</td>
+                                            <td>188.313324</td>
+                                            <td>28748.687739</td>
+                                            <td>7.544869</td>
+                                            <td>326.678363</td>
+                                            <td>280.467916</td>
+                                            <td>8.399735</td>
+                                            <td>54.917862</td>
+                                            <td>2.559708</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10.223862</td>
+                                            <td>248.071735</td>
+                                            <td>28749.716544</td>
+                                            <td>7.513408</td>
+                                            <td>393.663396</td>
+                                            <td>283.651634</td>
+                                            <td>13.789695</td>
+                                            <td>84.603556</td>
+                                            <td>2.672989</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.635849</td>
+                                            <td>203.361523</td>
+                                            <td>13672.091764	</td>
+                                            <td>4.563009</td>
+                                            <td>303.309771	</td>
+                                            <td>474.607645	</td>
+                                            <td>12.363817</td>
+                                            <td>62.798309	</td>
+                                            <td>4.401425	</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN	</td>
+                                            <td>118.988579	</td>
+                                            <td>14285.583854	</td>
+                                            <td>7.804174	</td>
+                                            <td>268.646941</td>
+                                            <td>389.375566	</td>
+                                            <td>12.706049	</td>
+                                            <td>53.928846	</td>
+                                            <td>3.595017</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11.180284	</td>
+                                            <td>227.231469	</td>
+                                            <td>25484.508491	</td>
+                                            <td>9.077200</td>
+                                            <td>404.041635	</td>
+                                            <td>563.885481</td>
+                                            <td>17.927806</td>
+                                            <td>71.976601</td>
+                                            <td>4.370562	</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.360640	</td>
+                                            <td>165.520797	</td>
+                                            <td>32452.614409	</td>
+                                            <td>7.550701</td>
+                                            <td>326.624353	</td>
+                                            <td>425.383419	</td>
+                                            <td>15.586810	</td>
+                                            <td>78.740016</td>
+                                            <td>3.662292	</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.974522	</td>
+                                            <td>218.693300</td>
+                                            <td>18767.656682	</td>
+                                            <td>8.110385	</td>
+                                            <td>NaN	</td>
+                                            <td>364.098230	</td>
+                                            <td>14.525746</td>
+                                            <td>76.485911	</td>
+                                            <td>4.011718	</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.119824	</td>
+                                            <td>156.704993</td>
+                                            <td>18730.813653	</td>
+                                            <td>3.606036	</td>
+                                            <td>282.344050	</td>
+                                            <td>347.715027</td>
+                                            <td>15.929536	</td>
+                                            <td>79.500778	</td>
+                                            <td>3.445756</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>150.174923	</td>
+                                            <td>27331.361962</td>
+                                            <td>6.838223</td>
+                                            <td>299.415781</td>
+                                            <td>379.761835</td>
+                                            <td>19.370807	</td>
+                                            <td>76.509996</td>
+                                            <td>4.413974</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.496232	</td>
+                                            <td>205.344982	</td>
+                                            <td>28388.004887	</td>
+                                            <td>5.072558</td>
+                                            <td>NaN</td>
+                                            <td>444.645352	</td>
+                                            <td>13.228311</td>
+                                            <td>70.300213</td>
+                                            <td>4.777382</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.347272</td>
+                                            <td>186.732881</td>
+                                            <td>41065.234765</td>
+                                            <td>9.629596	</td>
+                                            <td>364.487687</td>
+                                            <td>516.743282</td>
+                                            <td>11.539781</td>
+                                            <td>75.071617</td>
+                                            <td>4.376348</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.051786	</td>
+                                            <td>211.049406</td>
+                                            <td>30980.600787</td>
+                                            <td>10.094796</td>
+                                            <td>NaN	</td>
+                                            <td>315.141267	</td>
+                                            <td>20.397022</td>
+                                            <td>56.651604</td>
+                                            <td>4.268429</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.181560	</td>
+                                            <td>273.813807</td>
+                                            <td>24041.326280</td>
+                                            <td>6.904990</td>
+                                            <td>398.350517	</td>
+                                            <td>477.974642</td>
+                                            <td>13.387341</td>
+                                            <td>71.457362</td>
+                                            <td>4.503661</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.975464</td>
+                                            <td>279.357167</td>
+                                            <td>19460.398131</td>
+                                            <td>6.204321</td>
+                                            <td>NaN</td>
+                                            <td>431.443990</td>
+                                            <td>12.888759</td>
+                                            <td>63.821237</td>
+                                            <td>2.436086</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.371050</td>
+                                            <td>214.496610</td>
+                                            <td>25630.320037</td>
+                                            <td>4.432669</td>
+                                            <td>335.754439</td>
+                                            <td>469.914551</td>
+                                            <td>12.509164</td>
+                                            <td>62.797277</td>
+                                            <td>2.560299</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>227.435048</td>
+                                            <td>22305.567414</td>
+                                            <td>10.333918</td>
+                                            <td>NaN</td>
+                                            <td>554.820086</td>
+                                            <td>16.331693</td>
+                                            <td>45.382815</td>
+                                            <td>4.133423</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.660212</td>
+                                            <td>168.283747</td>
+                                            <td>30944.363591</td>
+                                            <td>5.858769</td>
+                                            <td>310.930858</td>
+                                            <td>523.671298</td>
+                                            <td>17.884235</td>
+                                            <td>77.042318</td>
+                                            <td>3.749701</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>215.977859</td>
+                                            <td>17107.224226</td>
+                                            <td>5.607060</td>
+                                            <td>326.943978</td>
+                                            <td>436.256194</td>
+                                            <td>14.189062</td>
+                                            <td>59.855476</td>
+                                            <td>5.459251</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.902476</td>
+                                            <td>196.903247</td>
+                                            <td>21167.500099</td>
+                                            <td>6.996312</td>
+                                            <td>NaN</td>
+                                            <td>444.478883</td>
+                                            <td>16.609033</td>
+                                            <td>90.181676</td>
+                                            <td>4.528523</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.400302</td>
+                                            <td>140.739062</td>
+                                            <td>17266.593422</td>
+                                            <td>10.056852</td>
+                                            <td>328.358241</td>
+                                            <td>472.874073</td>
+                                            <td>11.256381	</td>
+                                            <td>56.931906</td>
+                                            <td>4.824786</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.514415</td>
+                                            <td>198.767351</td>
+                                            <td>21218.702871</td>
+                                            <td>8.670937</td>
+                                            <td>323.596349</td>
+                                            <td>413.290450</td>
+                                            <td>14.900000</td>
+                                            <td>79.847843</td>
+                                            <td>5.200885</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.445062</td>
+                                            <td>207.926260</td>
+                                            <td>33424.768678</td>
+                                            <td>8.782147</td>
+                                            <td>384.007006</td>
+                                            <td>441.785876</td>
+                                            <td>13.805902</td>
+                                            <td>30.284597</td>
+                                            <td>4.184397</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>145.768181</td>
+                                            <td>13224.935639</td>
+                                            <td>7.906445</td>
+                                            <td>304.001993</td>
+                                            <td>298.990666</td>
+                                            <td>12.729525</td>
+                                            <td>49.536849</td>
+                                            <td>4.004871</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>266.421018</td>
+                                            <td>26362.965012</td>
+                                            <td>7.700063</td>
+                                            <td>395.389490</td>
+                                            <td>364.480107</td>
+                                            <td>10.348951</td>
+                                            <td>53.008381</td>
+                                            <td>3.991564</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>148.153061	</td>
+                                            <td>15193.413474</td>
+                                            <td>9.046833</td>
+                                            <td>307.011793</td>
+                                            <td>563.804743</td>
+                                            <td>16.568656</td>
+                                            <td>52.676185</td>
+                                            <td>6.038185</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.181449	</td>
+                                            <td>209.625601</td>
+                                            <td>15196.229987</td>
+                                            <td>5.994679	</td>
+                                            <td>338.336431</td>
+                                            <td>342.111286</td>
+                                            <td>7.922598</td>
+                                            <td>71.537953</td>
+                                            <td>5.088860</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.825490</td>
+                                            <td>190.756618</td>
+                                            <td>19677.892466</td>
+                                            <td>6.757541</td>
+                                            <td>NaN</td>
+                                            <td>452.836235</td>
+                                            <td>16.899038</td>
+                                            <td>47.081971</td>
+                                            <td>2.857472</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10.433291</td>
+                                            <td>117.791230</td>
+                                            <td>22326.892046</td>
+                                            <td>8.161505</td>
+                                            <td>307.707509</td>
+                                            <td>412.986834</td>
+                                            <td>12.890709</td>
+                                            <td>65.733478</td>
+                                            <td>5.057311</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.414148</td>
+                                            <td>235.044534</td>
+                                            <td>32555.852537</td>
+                                            <td>6.845952</td>
+                                            <td>387.175316</td>
+                                            <td>411.983364</td>
+                                            <td>10.244815</td>
+                                            <td>44.489297</td>
+                                            <td>3.160624</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>232.280452</td>
+                                            <td>14787.206265</td>
+                                            <td>5.474915</td>
+                                            <td>NaN</td>
+                                            <td>383.981723</td>
+                                            <td>12.166937</td>
+                                            <td>86.080727</td>
+                                            <td>5.029167</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.115817</td>
+                                            <td>191.952743</td>
+                                            <td>19620.545329</td>
+                                            <td>6.060713</td>
+                                            <td>323.836384</td>
+                                            <td>441.748379</td>
+                                            <td>10.966486</td>
+                                            <td>49.238231</td>
+                                            <td>3.902089</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.641630</td>
+                                            <td>183.908722</td>
+                                            <td>24752.072460</td>
+                                            <td>5.538314</td>
+                                            <td>286.059556</td>
+                                            <td>456.860096</td>
+                                            <td>9.034067</td>
+                                            <td>73.594657</td>
+                                            <td>3.464353</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.618064</td>
+                                            <td>304.235912</td>
+                                            <td>17281.975168</td>
+                                            <td>6.101084</td>
+                                            <td>NaN</td>
+                                            <td>399.471566</td>
+                                            <td>12.265002	</td>
+                                            <td>81.588992</td>
+                                            <td>2.896547</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>143.453731</td>
+                                            <td>19942.273218</td>
+                                            <td>5.890755</td>
+                                            <td>NaN</td>
+                                            <td>427.130671</td>
+                                            <td>22.469892</td>
+                                            <td>53.124094</td>
+                                            <td>2.907564</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.267188</td>
+                                            <td>198.614395</td>
+                                            <td>24683.723566</td>
+                                            <td>6.110612</td>
+                                            <td>328.077533</td>
+                                            <td>396.876949</td>
+                                            <td>16.471969</td>
+                                            <td>30.383315</td>
+                                            <td>4.324005</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>233.858996</td>
+                                            <td>11703.923907</td>
+                                            <td>4.599388</td>
+                                            <td>309.039320</td>
+                                            <td>349.399633</td>
+                                            <td>18.338893</td>
+                                            <td>42.677465</td>
+                                            <td>3.510004</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.331940</td>
+                                            <td>194.874065</td>
+                                            <td>16658.876503</td>
+                                            <td>7.993830</td>
+                                            <td>316.675162</td>
+                                            <td>335.120398</td>
+                                            <td>10.180514</td>
+                                            <td>59.572714</td>
+                                            <td>4.434820</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.145772</td>
+                                            <td>238.689929</td>
+                                            <td>28780.340432</td>
+                                            <td>6.814029</td>
+                                            <td>385.975650</td>
+                                            <td>332.032706</td>
+                                            <td>11.093163</td>
+                                            <td>66.138045</td>
+                                            <td>5.182591</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.920691</td>
+                                            <td>202.817483</td>
+                                            <td>9973.934059</td>
+                                            <td>6.882248</td>
+                                            <td>337.350529</td>
+                                            <td>333.192470</td>
+                                            <td>23.917601</td>
+                                            <td>71.833624</td>
+                                            <td>4.690707</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.758439</td>
+                                            <td>183.349454</td>
+                                            <td>21568.428779</td>
+                                            <td>4.731349</td>
+                                            <td>NaN</td>
+                                            <td>403.944168</td>
+                                            <td>18.668229</td>
+                                            <td>66.912400</td>
+                                            <td>4.542801</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.702926</td>
+                                            <td>216.850474</td>
+                                            <td>35606.440177</td>
+                                            <td>7.184351</td>
+                                            <td>NaN</td>
+                                            <td>504.638260</td>
+                                            <td>16.140790</td>
+                                            <td>77.536184</td>
+                                            <td>4.137739</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.953864</td>
+                                            <td>209.638293</td>
+                                            <td>10575.186281</td>
+                                            <td>4.462707</td>
+                                            <td>315.606594</td>
+                                            <td>391.184315</td>
+                                            <td>13.285334</td>
+                                            <td>87.390889</td>
+                                            <td>3.195710</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10.682966</td>
+                                            <td>173.375498</td>
+                                            <td>15758.740621</td>
+                                            <td>5.570784</td>
+                                            <td>307.352586</td>
+                                            <td>323.807913</td>
+                                            <td>10.090870</td>
+                                            <td>78.472784</td>
+                                            <td>3.999775</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>129.890572</td>
+                                            <td>34415.853146</td>
+                                            <td>6.321929</td>
+                                            <td>304.535224</td>
+                                            <td>470.329169</td>
+                                            <td>18.599410</td>
+                                            <td>72.403634</td>
+                                            <td>4.405586</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.757257</td>
+                                            <td>200.191400</td>
+                                            <td>21536.224687</td>
+                                            <td>4.915101</td>
+                                            <td>317.882900</td>
+                                            <td>404.717799</td>
+                                            <td>13.768323</td>
+                                            <td>47.930872</td>
+                                            <td>3.626135</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NaN</td>
+                                            <td>168.388431</td>
+                                            <td>27492.307307</td>
+                                            <td>7.046225</td>
+                                            <td>299.820478</td>
+                                            <td>383.795020</td>
+                                            <td>16.182066</td>
+                                            <td>75.729434</td>
+                                            <td>3.048057</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.809632</td>
+                                            <td>100.457615</td>
+                                            <td>12013.550629</td>
+                                            <td>5.212315</td>
+                                            <td>247.200826</td>
+                                            <td>605.220124</td>
+                                            <td>9.611349</td>
+                                            <td>66.084174</td>
+                                            <td>2.447444	</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.652488</td>
+                                            <td>145.010172</td>
+                                            <td>19871.788448</td>
+                                            <td>4.961066</td>
+                                            <td>288.052192</td>
+                                            <td>545.974994</td>
+                                            <td>10.942024</td>
+                                            <td>71.727414</td>
+                                            <td>3.742090</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10.560745	</td>
+                                            <td>181.893366</td>
+                                            <td>21783.651033</td>
+                                            <td>6.991260</td>
+                                            <td>340.390378</td>
+                                            <td>456.556402</td>
+                                            <td>16.482835</td>
+                                            <td>34.252049</td>
+                                            <td>3.964686</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.484255</td>
+                                            <td>260.092173</td>
+                                            <td>30616.615149</td>
+                                            <td>9.379134</td>
+                                            <td>NaN</td>
+                                            <td>404.670777</td>
+                                            <td>15.934484</td>
+                                            <td>66.621027</td>
+                                            <td>4.781188</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.520807</td>
+                                            <td>238.335112</td>
+                                            <td>28779.650011</td>
+                                            <td>8.282808</td>
+                                            <td>381.649323</td>
+                                            <td>481.318803</td>
+                                            <td>6.016337</td>
+                                            <td>39.091171</td>
+                                            <td>3.940605</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.999414</td>
+                                            <td>190.287050</td>
+                                            <td>24323.865903</td>
+                                            <td>7.230164</td>
+                                            <td>324.893038</td>
+                                            <td>405.330482</td>
+                                            <td>8.236558</td>
+                                            <td>99.427385</td>
+                                            <td>4.460684</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename = 'js/scripts.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename = 'assets/demo/chart-area-demo.js')}}"></script>
+        <script src="{{url_for('static', filename = 'assets/demo/chart-bar-demo.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="{{url_for('static', filename = 'js/datatables-simple-demo.js')}}"></script>
+    </body>
+</html>
