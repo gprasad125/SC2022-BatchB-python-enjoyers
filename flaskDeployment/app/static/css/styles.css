@@ -6609,6 +6609,13 @@ textarea.form-control-lg {
     z-index: 1020;
   }
 }
+
+.cropped1 {
+width: 225px; 
+height: 225px; 
+object-fit: cover;
+}
+
 .hstack {
   display: flex;
   flex-direction: row;

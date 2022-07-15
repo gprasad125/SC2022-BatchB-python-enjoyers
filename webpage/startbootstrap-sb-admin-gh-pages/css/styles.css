@@ -6611,10 +6611,9 @@ textarea.form-control-lg {
 }
 
 .cropped1 {
-width: 200px; 
-height: 200px; 
+width: 225px; 
+height: 225px; 
 object-fit: cover;
-border: 5px solid black;
 }
 
 .hstack {

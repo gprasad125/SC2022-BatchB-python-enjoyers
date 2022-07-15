@@ -1,0 +1,6 @@
+(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ 
+(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ cd teamwork [K/flask[K(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ cd teamwork/flaskDeployment/app[K(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ cd teamwork/flaskDeployment/app
+bash: cd: teamwork/flaskDeployment/app: No such file or directory
+(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ python-m main
+bash: python-m: command not found
+(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ [K(base) ]0;~/teamwork/Jason[01;34m~/teamwork/Jason[00m$ 
